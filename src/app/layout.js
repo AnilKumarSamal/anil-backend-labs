@@ -8,7 +8,11 @@ const geist = Geist({
 
 export const metadata = {
   metadataBase: new URL("https://anil-backend-labs.vercel.app"),
-
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   title: {
     default: "Anil Kumar | Senior Backend Engineer",
     template: "%s | Anil Kumar",
@@ -44,17 +48,25 @@ export const metadata = {
     title: "Anil Kumar | Senior Backend Engineer",
 
     description:
-      "Backend Engineer specializing in Node.js, AWS, Microservices and scalable cloud-native systems.",
+      "Senior Backend Engineer specializing in Node.js, AWS, Microservices and System Design.",
 
     url: "https://anil-backend-labs.vercel.app",
 
     siteName: "Anil Backend Labs",
 
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Anil Kumar - Senior Backend Engineer",
+      },
+    ],
+
     locale: "en_US",
 
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
 
@@ -62,9 +74,8 @@ export const metadata = {
 
     description: "Node.js • AWS • Microservices • System Design",
 
-    creator: "@YOUR_HANDLE",
+    images: ["/og-image.png"],
   },
-
   robots: {
     index: true,
     follow: true,
