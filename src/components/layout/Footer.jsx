@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="mt-14 flex flex-col gap-3 border-t border-slate-200 pt-8 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between">
           <p>© {year} Anil Kumar. All rights reserved.</p>
 
-          <p>Built with Next.js • Tailwind CSS • Vercel</p>
+          <p>Built with Next.js 15 • Tailwind CSS • Vercel</p>
         </div>
       </div>
     </footer>
