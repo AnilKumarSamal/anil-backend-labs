@@ -1,56 +1,98 @@
-import Link from "next/link";
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+import CodeWindow from "./CodeWindow";
 import { heroData } from "@/data/hero";
+import { HiCheckCircle, HiGlobeAlt, HiBriefcase } from "react-icons/hi2";
 
+const availabilityIcons = {
+  "Immediate Joiner": HiCheckCircle,
+  Remote: HiGlobeAlt,
+  "Backend Consultant": HiBriefcase,
+};
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 lg:py-32">
+    <section className="bg-white py-16">
       <Container>
-        <div className="mx-auto max-w-5xl text-center">
-          <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
-            {heroData.badge}
-          </span>
+        <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+          {/* Left Content */}
+          {/* Left Content */}
+          <div className="max-w-xl">
+            {/* Badge */}
+            <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
+              🚀 Available for Full-Time Opportunities
+            </div>
 
-          <h1 className="mt-8 text-5xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
-            {heroData.title}
-          </h1>
+            {/* Heading */}
+            <h1 className="mt-8 text-6xl font-extrabold leading-[1.05] tracking-tight text-gray-900">
+              Node.js
+              <br />
+              <span className="text-blue-600"> Backend</span>
+              <br />
+              Engineer
+            </h1>
+            <p className="mt-6 text-xl font-medium leading-8 text-gray-600">
+              Building scalable APIs, microservices & cloud-native systems.
+            </p>
+            {/* Description */}
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Senior Backend Engineer with <strong>10+ years</strong> of
+              experience building scalable APIs, microservices, fintech
+              platforms and cloud-native applications using Node.js, AWS and
+              PostgreSQL.
+            </p>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-600 md:text-xl">
-            {heroData.description}
-          </p>
+            {/* CTA */}
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button>View Projects →</Button>
 
-          <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-gray-500">
-            {heroData.subDescription}
-          </p>
+              <Button variant="secondary">Download Resume</Button>
+            </div>
 
-          <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href="/projects"
-              className="rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-blue-700"
-            >
-              {heroData.buttons.primary}
-            </Link>
+            {/* Availability */}
+            <div className="mt-8 flex flex-wrap gap-2.5">
+              {heroData.availability.map((item) => {
+                const Icon = availabilityIcons[item];
 
-            <Link
-              href="/contact"
-              className="rounded-xl border border-gray-300 px-8 py-4 text-base font-semibold text-gray-900 transition hover:border-blue-600 hover:text-blue-600"
-            >
-              {heroData.buttons.secondary}
-            </Link>
+                return (
+                  <div
+                    key={item}
+                    className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3.5 py-2 text-sm font-medium text-gray-700"
+                  >
+                    <Icon className="h-4 w-4 text-blue-600" />
+                    <span>{item}</span>
+                  </div>
+                );
+              })}
+            </div>
+            {/* Tech Stack */}
+
+            <div className="mt-12">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-gray-500">
+                Primary Stack
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                {heroData.technologies.map((tech) => {
+                  const Icon = tech.icon;
+
+                  return (
+                    <div
+                      key={tech.name}
+                      className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 transition-all duration-200 hover:border-blue-200 hover:bg-blue-50"
+                    >
+                      <Icon size={16} color={tech.color} />
+
+                      <span className="text-sm font-medium text-gray-700">
+                        {tech.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-
-          <p className="mt-8 text-gray-500">{heroData.subText}</p>
-
-          <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {heroData.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          {/* Right Side */}
+          <CodeWindow />
         </div>
       </Container>
     </section>

@@ -1,42 +1,53 @@
+import { SiNodedotjs, SiPostgresql, SiRedis, SiDocker } from "react-icons/si";
+
+import { FaAws } from "react-icons/fa";
+import { TbBrandNodejs } from "react-icons/tb";
+
 export const heroData = {
-  badge: "Available for Full-Time & Contract Opportunities",
+  badge: "🚀 Available for Full-Time Opportunities",
 
   title: "Node.js Backend Engineer",
 
   description:
-    "Building scalable backend systems that power fintech and cloud applications.",
-  subDescription: "10+ years | Node.js | AWS | PostgreSQL | Redis | Docker",
+    "Building scalable backend systems that power fintech, cloud applications, and enterprise platforms using Node.js, AWS, PostgreSQL, Redis, and Docker.",
 
   buttons: {
     primary: "View Projects",
     secondary: "Download Resume",
   },
-  subText: "Available for Full-Time • Contract • Backend Consulting",
+
   technologies: [
-    "Node.js",
-    "Express.js",
-    "AWS",
-    "PostgreSQL",
-    "Redis",
-    "Docker",
+    {
+      name: "Node.js",
+      icon: SiNodedotjs,
+      color: "#5FA04E",
+    },
+    {
+      name: "Express",
+      icon: TbBrandNodejs,
+      color: "#444444",
+    },
+    {
+      name: "AWS",
+      icon: FaAws,
+      color: "#FF9900",
+    },
+    {
+      name: "Postgres",
+      icon: SiPostgresql,
+      color: "#336791",
+    },
+    {
+      name: "Redis",
+      icon: SiRedis,
+      color: "#DC382D",
+    },
+    {
+      name: "Docker",
+      icon: SiDocker,
+      color: "#2496ED",
+    },
   ],
 
-  stats: [
-    {
-      value: "10+",
-      label: "Years Experience",
-    },
-    {
-      value: "10000+",
-      label: "Investors Served",
-    },
-    {
-      value: "5L+",
-      label: "Transactions",
-    },
-    {
-      value: "1000+",
-      label: "Daily Active Users",
-    },
-  ],
+  availability: ["Immediate Joiner", "Remote", "Backend Consultant"],
 };

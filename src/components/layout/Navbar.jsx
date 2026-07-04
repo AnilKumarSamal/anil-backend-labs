@@ -18,14 +18,21 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-3xl font-bold tracking-tight text-gray-900"
-        >
-          Backend Labs
+        <Link href="/" className="flex items-center gap-3">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-lg font-bold text-white shadow-sm">
+            AK
+          </div>
+
+          <div>
+            <h2 className="text-xl font-bold tracking-tight text-slate-900">
+              AK Labs
+            </h2>
+
+            <p className="-mt-1 text-xs text-slate-500">Backend Engineering</p>
+          </div>
         </Link>
 
         {/* Desktop Menu */}
