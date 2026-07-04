@@ -11,7 +11,7 @@ const availabilityIcons = {
 };
 export default function Hero() {
   return (
-    <section className="bg-white py-16">
+    <section id="hero" className="bg-white py-16">
       <Container>
         <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Left Content */}

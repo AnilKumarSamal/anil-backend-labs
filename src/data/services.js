@@ -1,38 +1,52 @@
+import {
+  HiOutlineServer,
+  HiOutlineCloud,
+  HiOutlineCircleStack,
+  HiOutlineBolt,
+  HiOutlineCpuChip,
+  HiOutlineRocketLaunch,
+} from "react-icons/hi2";
+
 export const services = [
   {
-    icon: "⚡",
-    title: "REST API Development",
+    icon: HiOutlineServer,
+    title: "Backend APIs",
     description:
-      "Production-ready REST APIs using Express.js with authentication, validation, pagination, logging and Swagger documentation.",
+      "Build secure REST APIs with JWT authentication, request validation, authorization and Swagger documentation.",
   },
+
   {
-    icon: "🏗️",
-    title: "Microservices",
+    icon: HiOutlineCloud,
+    title: "Cloud & AWS",
     description:
-      "Design scalable event-driven backend systems using queues, Redis caching and asynchronous communication.",
+      "Develop cloud-native applications using AWS, Lambda, SQS, S3 and event-driven architecture.",
   },
+
   {
-    icon: "☁️",
-    title: "AWS Cloud",
+    icon: HiOutlineCircleStack,
+    title: "Databases",
     description:
-      "Deploy, monitor and optimize cloud-native applications using EC2, S3, Lambda, IAM and other AWS services.",
+      "Design high-performance PostgreSQL, MySQL and Redis solutions with optimized queries, indexing and caching.",
   },
+
   {
-    icon: "🗄️",
-    title: "Database Design",
+    icon: HiOutlineBolt,
+    title: "Performance",
     description:
-      "Schema design, indexing, query optimization and high-performance PostgreSQL and MySQL solutions.",
+      "Improve application performance with Redis caching, rate limiting, background jobs and asynchronous processing.",
   },
+
   {
-    icon: "🚀",
-    title: "Performance Optimization",
+    icon: HiOutlineCpuChip,
+    title: "System Design",
     description:
-      "Caching, rate limiting, background jobs, profiling and backend performance tuning for scalable systems.",
+      "Design scalable backend systems, microservices and distributed architectures for production environments.",
   },
+
   {
-    icon: "🐳",
-    title: "Docker & CI/CD",
+    icon: HiOutlineRocketLaunch,
+    title: "DevOps & CI/CD",
     description:
-      "Containerized applications with GitHub Actions, automated deployments and production-ready DevOps workflows.",
+      "Containerize applications with Docker and automate testing, CI/CD pipelines and production deployments.",
   },
 ];
