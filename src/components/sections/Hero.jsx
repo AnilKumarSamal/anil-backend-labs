@@ -51,20 +51,6 @@ export default function Hero() {
               </span>
             ))}
           </div>
-
-          <div className="mt-20 grid grid-cols-2 gap-8 border-t border-gray-200 pt-10 md:grid-cols-4">
-            {heroData.stats.map((item) => (
-              <div key={item.label}>
-                <h2 className="text-4xl font-bold text-blue-600">
-                  {item.value}
-                </h2>
-
-                <p className="mt-2 text-sm uppercase tracking-wide text-gray-500">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </Container>
     </section>
